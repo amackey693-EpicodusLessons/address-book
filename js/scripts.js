@@ -26,17 +26,17 @@ AddressBook.prototype.findContact = function(id) {
   return false;
 }
 
-AddressBook.prototype.deleteContact = function(id) {
-  for (var i = 0; i< this.contacts.length; i++) {
-    if (this.contacts[i].id == id) {
-      delete this.contacts[i]; {
-        if (this.contacts[i].id == id) {
-          return this.contacts[i];
+AddressBook.prototype.deleteContact = function (id) {
+  for (var i = 0; i < this.contacts.length; i++) {
+    if (this.contacts[i]) {
+      if (this.contacts[i].id == id) {
+        delete this.contacts[i]; {
+          return true;
         }
       }
-    }
-  };
-  return false; 
+    };
+    return false;
+  }
 }
 
 // Business Logic for Contacts -----
